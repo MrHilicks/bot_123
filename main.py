@@ -13,8 +13,8 @@ custom = detector.CustomObjects(person=True)
 
 detections = detector.detectCustomObjectsFromImage(custom_objects=custom,
                                                    input_image=os.path.join(execution_path, "image.jpg"),
-                                                   output_image_path=os.path.join(execution_path, "image_new.jpg"),
-                                                   minimum_percentage_probability=30)
+                                                   output_image_path=os.path.join(execution_path, "detected_people.jpg"),
+                                                   minimum_percentage_probability=20)
 
 persons = len(detections)
 print('Количество людей в очереди: ' + str(persons))
